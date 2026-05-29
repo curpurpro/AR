@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AR Anatomi Tubuh Manusia - Desktop Version</title>
   
-  <!-- MindAR + A-Frame Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   
   <style>
     body { margin: 0; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; background-color: #0b0a11; }
     
-    /* Panel Informasi Samping (Layout Desktop) */
     #desktop-panel {
       position: absolute; top: 0; right: 0; width: 360px; height: 100vh;
       background: rgba(20, 19, 31, 0.95); color: #eaeaea;
@@ -26,7 +24,7 @@
     #organ-content { display: none; }
     #organ-title { font-size: 26px; font-weight: bold; color: #AFA9EC; margin-bottom: 4px; }
     #organ-latin { font-size: 14px; color: #5DCAA5; font-style: italic; margin-bottom: 20px; }
-    #organ-desc { font-size: 15px; line-height: 1.6; margin-bottom: 25px; color: #e0e0e0; }
+    #organ-desc { font-size: 15px; line-height: 1.6; color: #e0e0e0; margin-bottom: 25px; }
     
     .fact-box {
       background: #EEEDFE; color: #3C3489; padding: 15px; border-radius: 8px;
@@ -74,16 +72,15 @@
     device-orientation-permission-ui="enabled: false">
 
     <a-assets>
-      <a-asset-item id="heart-model" src="./assets/heart.glb"></a-asset-item>
-      <a-asset-item id="lung-model" src="./assets/lungs.glb"></a-asset-item>
-      <a-asset-item id="stomach-model" src="./assets/stomach.glb"></a-asset-item>
-      <a-asset-item id="liver-model" src="./assets/liver.glb"></a-asset-item>
-      <a-asset-item id="kidney-model" src="./assets/kidney.glb"></a-asset-item>
+      <a-asset-item id="heart-model" src="./realistic_human_heart.glb"></a-asset-item>
+      <a-asset-item id="lung-model" src="./realistic_human_lungs.glb"></a-asset-item>
+      <a-asset-item id="stomach-model" src="./stomach_-_organ.glb"></a-asset-item>
+      <a-asset-item id="liver-model" src="./human_liver_and_gallbladder.glb"></a-asset-item>
+      <a-asset-item id="kidney-model" src="./kidney.glb"></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <!-- Target 0: Jantung (Kartu 01) -->
     <a-entity mindar-image-target="targetIndex: 0" class="target-entity">
       <a-gltf-model src="#heart-model" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Jantung" data-latin="Cor"
@@ -92,7 +89,6 @@
       </a-gltf-model>
     </a-entity>
 
-    <!-- Target 1: Paru-paru (Kartu 02) -->
     <a-entity mindar-image-target="targetIndex: 1" class="target-entity">
       <a-gltf-model src="#lung-model" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Paru-paru" data-latin="Pulmo"
@@ -101,7 +97,6 @@
       </a-gltf-model>
     </a-entity>
 
-    <!-- Target 2: Lambung (Kartu 03) -->
     <a-entity mindar-image-target="targetIndex: 2" class="target-entity">
       <a-gltf-model src="#stomach-model" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Lambung" data-latin="Gaster / Ventriculus"
@@ -110,7 +105,6 @@
       </a-gltf-model>
     </a-entity>
 
-    <!-- Target 3: Hati (Kartu 04) -->
     <a-entity mindar-image-target="targetIndex: 3" class="target-entity">
       <a-gltf-model src="#liver-model" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Hati" data-latin="Hepar"
@@ -119,7 +113,6 @@
       </a-gltf-model>
     </a-entity>
 
-    <!-- Target 4: Ginjal (Kartu 05) -->
     <a-entity mindar-image-target="targetIndex: 4" class="target-entity">
       <a-gltf-model src="#kidney-model" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Ginjal" data-latin="Ren / Nephros"
@@ -148,6 +141,7 @@
         content.style.display = 'block';
       });
 
+      entity.addEventListener;
       entity.addEventListener("targetLost", event => {
         placeholder.style.display = 'block';
         content.style.display = 'none';
