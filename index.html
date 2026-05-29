@@ -71,18 +71,10 @@
     color-space="sRGB" renderer="colorManagement: true" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
 
-    <a-assets>
-      <a-asset-item id="heart-model" src="./realistic_human_heart.glb"></a-asset-item>
-      <a-asset-item id="lung-model" src="./realistic_human_lungs.glb"></a-asset-item>
-      <a-asset-item id="stomach-model" src="./stomach_-_organ.glb"></a-asset-item>
-      <a-asset-item id="liver-model" src="./human_liver_and_gallbladder.glb"></a-asset-item>
-      <a-asset-item id="kidney-model" src="./kidney.glb"></a-asset-item>
-    </a-assets>
-
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0" class="target-entity">
-      <a-gltf-model src="#heart-model" position="0 0 0.1" scale="0.06 0.06 0.06"
+      <a-gltf-model src="./realistic_human_heart.glb" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Jantung" data-latin="Cor"
         data-desc="Organ vital berotot yang berfungsi memompa darah ke seluruh tubuh melalui pembuluh darah dengan kontraksi ritmis yang konstan."
         data-fact="Jantung berdetak sekitar 100.000 kali dalam sehari dan sudah mulai aktif sejak minggu ke-4 di dalam kandungan!">
@@ -90,7 +82,7 @@
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 1" class="target-entity">
-      <a-gltf-model src="#lung-model" position="0 0 0.1" scale="0.06 0.06 0.06"
+      <a-gltf-model src="./realistic_human_lungs.glb" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Paru-paru" data-latin="Pulmo"
         data-desc="Organ utama pada sistem pernapasan yang mengontrol pertukaran gas oksigen (O2) dari udara luar dengan karbon dioksida (CO2) dari darah."
         data-fact="Paru-paru kanan berukuran sedikit lebih besar daripada paru-paru kiri karena paru-paru kiri harus berbagi ruang dengan jantung.">
@@ -98,7 +90,7 @@
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 2" class="target-entity">
-      <a-gltf-model src="#stomach-model" position="0 0 0.1" scale="0.06 0.06 0.06"
+      <a-gltf-model src="./stomach_-_organ.glb" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Lambung" data-latin="Gaster / Ventriculus"
         data-desc="Organ kantung besar tempat pencernaan makanan secara mekanik (meremas) dan kimiawi menggunakan asam lambung serta enzim protease."
         data-fact="Asam lambung (pH 1.5-3.5) sangat korosif hingga mampu melarutkan logam seng! Lapisan mukosanya diperbarui tiap 3 hari agar tidak melukai diri sendiri.">
@@ -106,7 +98,7 @@
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 3" class="target-entity">
-      <a-gltf-model src="#liver-model" position="0 0 0.1" scale="0.06 0.06 0.06"
+      <a-gltf-model src="./human_liver_and_gallbladder.glb" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Hati" data-latin="Hepar"
         data-desc="Organ dalam terbesar manusia yang berfungsi menawarkan racun (detoksifikasi), memproduksi cairan empedu, serta menyintesis protein."
         data-fact="Hati memiliki kemampuan regenerasi sel yang luar biasa. Jika 75% jaringannya dipotong, ia mampu tumbuh kembali ke ukuran semula dalam beberapa minggu!">
@@ -114,7 +106,7 @@
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 4" class="target-entity">
-      <a-gltf-model src="#kidney-model" position="0 0 0.1" scale="0.06 0.06 0.06"
+      <a-gltf-model src="./kidney.glb" position="0 0 0.1" scale="0.06 0.06 0.06"
         data-title="Ginjal" data-latin="Ren / Nephros"
         data-desc="Sepasang organ penyaring yang berfungsi membersihkan sekitar 180 liter darah per hari dari limbah metabolisme untuk dikeluarkan menjadi urine."
         data-fact="Manusia bisa hidup normal dan sehat hanya dengan satu ginjal. Ginjal yang tersisa akan membesar secara alami untuk mengambil alih tugas ginjal yang hilang.">
